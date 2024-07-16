@@ -1,6 +1,7 @@
 #Importing the necessary libraries
 import os
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from dotenv import load_dotenv
 import google.generativeai as genai
 
@@ -12,6 +13,7 @@ model = genai.GenerativeModel('gemini-pro')
 
 #Creating the Flask app
 app = Flask(__name__)
+CORS(app)
 
 #Initializing conversation history
 conversation_history = []
@@ -31,7 +33,7 @@ def get_response(query):
     return response.text
 
 #Route to handle the chatbot
-@app.route('/chat', methods=['POST'])
+@app.route('/', methods=['POST'])
 def chat():
     user_input = request.json['message']
     response = get_response(user_input)
