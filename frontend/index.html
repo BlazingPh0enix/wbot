@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W Bot</title>
 </head>
 <body>
-    <div id="chat-container">
+    <!-- <div id="chat-container">
         <div id="chat-header">
             W Bot
         </div>
@@ -18,7 +20,31 @@
             <input type="text" id="user-input" placeholder="Type your message here :)">
             <button type="submit" id="send-button">Send</button>
         </div>
-    </div>
+    </div> -->
+    <df-messenger
+  project-id="gen-lang-client-0034745120"
+  agent-id="3f0e8d2a-f719-4a93-9106-6b1615461c53"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat
+   chat-title="W Bot">
+  </df-messenger-chat>
+</df-messenger>
+    <style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #203a43;
+    --df-messenger-message-user-background: #DCF8C6;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 300px;
+  }
+</style>
     <script src="script.js"></script>
 </body>
 </html>
