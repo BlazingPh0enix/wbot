@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="frontend/style.css">
-    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W Bot</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="frontend/style.css">
+  <link rel="stylesheet"
+    href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRAPE</title>
 </head>
+
 <body>
-    <df-messenger
-  project-id="gen-lang-client-0034745120"
-  agent-id="3f0e8d2a-f719-4a93-9106-6b1615461c53"
-  language-code="en"
-  max-query-length="-1">
-  <df-messenger-chat
-   chat-title="GRAPE">
-  </df-messenger-chat>
-</df-messenger>
-    <style>
-  df-messenger {
-    z-index: 999;
-    position: fixed;
-    --df-messenger-font-color: #000;
-    --df-messenger-font-family: Google Sans;
-    --df-messenger-chat-background: #203a43;
-    --df-messenger-message-user-background: #DCF8C6;
-    --df-messenger-message-bot-background: #fff;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    width: 300px;
-  }
-</style>
-    <script src="frontend/script.js"></script>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#wines">Our Wines</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Welcome to Jessup Cellars</h1>
+      <div class="content">
+        <div class="content-box">
+          <h2>Our Wines</h2>
+          <p>Discover our exquisite selection of handcrafted wines, each bottle telling a unique story of Napa Valley
+            terroir.</p>
+        </div>
+        <div class="content-box">
+          <h2>Visit Us</h2>
+          <p>Experience the warmth of Jessup Cellars with a visit to our tasting room in the heart of Yountville.</p>
+        </div>
+        <div class="content-box">
+          <h2>Join Our Club</h2>
+          <p>Become a member of our wine club and enjoy exclusive access to limited releases and special events.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Jessup Cellars. All rights reserved.</p>
+  </footer>
+  <df-messenger project-id="gen-lang-client-0034745120" agent-id="3f0e8d2a-f719-4a93-9106-6b1615461c53"
+    language-code="en" max-query-length="-1">
+    <df-messenger-chat chat-title="GRAPE">
+    </df-messenger-chat>
+  </df-messenger>
+  <style>
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans;
+      --df-messenger-chat-background: #203a43;
+      --df-messenger-message-user-background: #DCF8C6;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      width: 300px;
+    }
+  </style>
+  <script src="frontend/script.js"></script>
 </body>
+
 </html>
